@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0px;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .mobile-block {
+            width: 375px;
+            background-color: #F1F1F1;
+            padding-bottom: 30px
+        }
+
+        p {
+            font-weight: regular;
+            font-size: 20px;
+            line-height: 40px;
+            margin-left: 37px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            color: #404040;
+            text-align: left;
+        }
+
+        .highlight{
+            width: 375px;
+            background-color: #FFFFFF;
+            margin: 0px;
+            padding: 14px 37px 22px 38px;
+            margin-bottom: 60px
+
+        }
+
+        .highlight > p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 40px;
+            color: #4a4949;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 3px;
+        }
+
+        p>span{
+            color: #A67A44
+        }
+
+
+        figure {
+            margin: 0px;
+            width: 100%
+        }
+
+        img {
+            width: 100%
+        }
+
+        figcaption {
+            width: 235px;
+            line-height: 19px;
+            font-size: 14px;
+            font-weight: 400px;
+            text-align: justify;
+            color: #999999;
+            margin-top: 15px;
+            margin-right: 15px;
+            margin-left: auto;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #D0A67D
+        }
+
+        header {
+            padding-top: 30px
+        }
+
+        header .ham, header .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo{
+            width: 307px;
+            height: 40px;
+            padding-left: 20px;
+        }
+
+        .logo > img{
+            width: 219px;
+        }
+
+        .ham>div {
+            width: 28px;
+            height: 3px;
+            background-color: #C71B0A;
+            margin-bottom: 10px;
+            /*置右*/
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .ham>div:last-child{
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 50px;
+            color: #404040;
+            width: 326px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 34px;
+            margin-top: 15px
+        }
+
+        .firstphotocaption{
+            width: 360px;
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: 400px;
+            text-align: justify;
+            color: #808080;
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: 8px
+        }
+
+        .metadata .top-separation-line {
+            width: 300px;
+            height: 15px;
+            border-top-color: #D0D0D0;
+            border-top-width: 1px;
+            border-top-style:solid;
+            border-right-color: #D0D0D0;
+            border-right-width: 1px;
+            border-right-style:solid;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 75px
+        }
+
+        .metadata .second-separation-line {
+            width: 300px;
+            height: 15px;
+            border-top-color: #D0D0D0;
+            border-top-width: 1px;
+            border-top-style:solid;
+            border-right-color: #D0D0D0;
+            border-right-width: 1px;
+            border-right-style:solid;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 17px
+        }
+
+        .metadata .bottom-separation-line {
+            width: 300px;
+            height: 15px;
+            border-bottom-color: #D0D0D0;
+            border-bottom-width: 1px;
+            border-bottom-style:solid;
+            border-right-color: #D0D0D0;
+            border-right-width: 1px;
+            border-right-style:solid;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 23px
+        }
+
+/* 為什麼這樣不行？
+        .metadada .bottom-separation-line{
+            width: 300px;
+            height: 15px;
+            border-bottom: 1px solid #D0D0D0;
+            border-right: 1px solid #D0D0D0;
+            margin-right: auto;
+            margin-left: auto
+        }
+ */
+
+        .metadata .category{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+            color: #A67A44;
+            margin-left: 49px;
+        }
+
+        .metadata .publish-date{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #808080;
+            margin-left: 40px;
+            display:block
+        }
+
+        .metadata .first-hashtag {
+            margin-top: 45px;
+            margin-left:36px;
+            border: 1px solid #808080;
+            border-radius: 30px;
+            padding: 6px 12px 6px 12px;
+            display: inline-block; 
+            font-size: 14px;
+            font-weight: 400px;
+            line-height: 20px;
+            color: #808080
+        }
+
+        .metadata .hashtag {
+            margin-top: 45px;
+            margin-left:4px;
+            border: 1px solid #808080;
+            border-radius: 30px;
+            padding: 6px 12px 6px 12px;
+            display: inline-block; 
+            font-size: 14px;
+            font-weight: 400px;
+            line-height: 20px;
+            color: #808080
+        }
+
+        .metadata .toolzone {
+            width: 286px;
+            height: 36px;
+            margin-top: 23px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 81px
+        }
+
+        .metadata .toolzone img{
+            width: 36px;
+            height: 36px;
+            margin-right: 7px
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="mobile-block">
+        <!--最上面 -->
+        <header>
+            <!--LOGO -->
+            <div class="logo">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/twreporter-logo.svg" >
+            </div>
+            <!--HAM -->
+            <div class="ham" ,style= display:inline-block>
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+            </div>
+
+        </header>
+
+        <!--英文字 -->
+        <h2 style="
+        font-size: 16px; 
+        font-weight: bold; 
+        color: #000000;
+        margin-right: auto;
+        margin-left: 30px;
+        margin-top: 45px;
+        margin-bottom: 0px">
+            Reporter Saturday Features
+        </h2>
+
+        <!--大標題 -->
+        <h1>
+            【山思而行】登山中的死亡，對生命的凝視
+        </h1>
+
+        <!--首圖與圖說-->
+        <div>
+            <img src="https://www.twreporter.org/images/20200214133514-05611004a1d3a72fe4c955027f2d4c33-desktop.jpg">
+            <p class= firstphotocaption>
+                登上山峰之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。圖為2016年2月，一支國際登山隊正跨越珠穆朗瑪峰基地營附近的冰川。（攝影／AP／Tashi Sherpa／達志影像）
+            </p>
+        </div>
+
+        <!--metadata們-->
+        <div class="metadata">
+            <div class="top-separation-line"></div>
+            <span class="category">環境・教育</span>
+            <div class="second-separation-line"></div>
+            <span class="publish-date">刊出日期 2020/2/28</span>
+            <div class="first-hashtag">#體育</div>
+            <div class="hashtag">#山思而行</div>
+            <div class="bottom-separation-line"></div>
+            <div class="toolzone">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/add-bookmark-mobile.svg">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/tool-text.svg">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/tool-print.svg">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/share-line.svg">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/share-fb.svg">
+                <img src="https://github.com/nickhsine/teach-at-nccu/raw/master/assets/icons/share-twitter.svg">  
+            </div>
+        </div>
+
+
+        <!--內文 -->
+        <p>
+            講到登山，普遍的印象可能是壯闊的山景，雲海朝霞萬丈金芒；也可能是山上人與人之間的情誼，過地形時伸手扶一把，或濕冷雨天一碗熱呼呼的泡麵。我們在山中感受生命各種美好，汲取養分。就算是逆境，痛苦會過去，美會留下，回到人間後依舊能量滿滿再度出發。
+        </p>
+        <p>
+            做為人，不知為何，我們傾向記憶美好，卻遺忘過程的苦痛。但我卻想，這是否讓我們理解、記憶一件事情性質的方式，也隨之產生偏誤？
+        </p>
+        <p>
+            我想說的是，登山是件會死人的運動。
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" transform="rotate(90 10 10)" fill="white" />
+                <path d="M10 15L5.66987 7.5L14.3301 7.5L10 15Z" fill="#D0A67D" />
+            </svg>
+        </p>
+        <div class="highlight">
+            <p>
+                某程度上，登上山巔之途，就是在死亡的陰影之下，動用自身全部的感官與技藝，設法避開那些遭致危機的陷阱。這樣的經驗本身，就是一種回報，高處的風景與抵達最高點的滿足，則是額外的嘉獎。
+            </p>
+        </div>
+        <p>
+            那是個風和日麗的早晨，我跟阿果從標高5,600公尺的馬卡魯峰前進基地營帳篷中醒來。我倆前一天剛攀升至7,150公尺處進行適應攀登並下山，往後一週將是一系列壞天氣週期的到來，所以我們正準備迎接休息日的放鬆作息。
+        </p>
+        <p>
+            慢慢踱進餐廳帳，吃完千篇一律的鬆餅加煎蛋，正想放個音樂泡杯咖啡，這時外面有人叫我。是Lakpa。
+        </p>
+        <p>
+            Lakpa是隔壁營區的商業團"Pioneer Adventure"的老闆，今年除了我跟阿果，馬卡魯峰這裡還有同樣來自台灣的登山者
+            <span>
+                <a href="https://www.twreporter.org" target="_blank" >
+                    三條魚
+                </a>
+            </span>
+            ，她就在這個隊伍中。
+        </p>
+        <p>
+            原本以為Lakpa是來約我們晚上去他們隊上吃個飯之類的，興高采烈的走出去跟他打招呼，沒想到他表情挺嚴肅：
+        </p>
+        <div style="height:30px"></div>
+        <!--圖與圖說 -->
+        <figure>
+            <img src="https://www.twreporter.org/images/20200214133536-860474831449c5e95fab1b3d7c98b3ad-tablet.jpg">
+            <figcaption>2017年3月，一隊登山者朝向尼泊爾羅布崎的登山營地前進。（攝影／AP／Tashi Sherpa／達志影像）
+            </figcaption>
+        </figure>
+
+    </div>
+
+</body>
+
+</html>
